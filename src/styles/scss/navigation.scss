@@ -1,0 +1,296 @@
+@import "declarations.scss";
+
+
+.circle-button {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgb(105, 104, 104);
+
+    opacity: 0.7;
+        
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.header {
+    $button-size: 32px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: map-get($colors, background-elevated-base);
+
+    padding: {
+        left: calc-padding($menu-width, $main-padding);
+        right: $main-padding;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__button {        
+        @include square($button-size);
+        margin-right: $button-size / 2;
+        background-color: rgba(0, 0, 0, 0.7);
+        img {
+            @include square(22px);
+        }
+    } 
+}
+
+.account {
+    $account-size: 32px;
+    $account-inset: 4px;
+    display: flex;    
+    align-items: center;
+    background-color: map-get($colors, background-elevated-dark);
+    opacity: 0.9;
+    border-radius: 30px;
+    border: 1px hidden map-get($colors, background-elevated-highlight);
+    height: $account-size;
+
+    &__image {
+        $size: $account-size - $account-inset;
+        @include square($size);
+        margin-right: 15%;
+    }
+
+    &__name {
+        color: map-get($colors, text-primary);
+        text-transform: capitalize;            
+        margin-right: 30px;
+        font: {
+            size: 14px;
+            weight: 600;
+        }
+    }
+}
+
+.image-link {}
+
+
+.tag {
+    &__body {
+        display: flex;
+        justify-content: start;
+        align-items: center;        
+    }
+
+    &__icon {
+        margin-right: 20px;    
+        @include square(30px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        fill: #fff;
+
+        &_n {
+            img {
+                @include square(30px);
+            }
+        }
+
+        &_s {            
+            img {
+                @include square(25px);
+            }
+        }
+    }
+
+    &__text {
+        color: map-get($colors, text-primary);
+        opacity: 0.75;
+        font: {
+            size: 13px;
+            weight: 700;
+        }
+    }
+
+    &:hover &__text {
+        color: map-get($colors, text-primary);
+        opacity: 0.98;     
+    }
+
+    &:hover {
+        $color: map-get($colors, background-elevated-highlight);
+        zoom: 1.01;
+        border-radius: 2px;
+        background-color: rgba($color, 0.1);
+    }
+}
+
+.menu {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    height: 100vh;
+    width: $menu-width;
+    padding: 24px 0px 24px 24px;
+    background-color: map-get($colors, background-elevated-dark);
+    
+    &__banner {
+        @include expanded(w);
+    }
+
+    &__logo {
+        height: 40px;
+        width: 131px;        
+    }
+
+    &__block {
+        margin-top: 30px; 
+    }
+
+    &__tag {
+        &:first {
+            margin-top: 10px;
+        }
+        margin-top: 15px;
+    }
+}
+
+.footer {
+    position: fixed;
+    z-index: 100;
+    height: $footer-height;
+    bottom: 0;
+    width: 100%;
+    padding-left: $menu-width;
+}
+
+
+.play-button {
+    @extend .circle-button;
+}
+
+.progress-bar {
+    $color: #dadada;
+    background-color: rgba($color, $alpha: 0.7);
+    height: 3px;
+    border-radius: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba($color, $alpha: 0.9);
+    }
+}
+
+$img-margin: 16px;
+
+.small-track-label {
+    @include track-label(
+        $img-size: 56px, 
+        $img-margin: $img-margin, 
+        $text-padding: 4px 0px, 
+        $primary-font-size: 14px, 
+        $secondary-font-size: 12px
+    );
+}
+
+.track-progress {
+    display: flex;
+    align-items: center;
+
+    &__bar {
+        width: 80%;
+        height: 30%;
+    }
+
+    &__time {
+        margin: 0 10px;
+        @extend %secondary-text;
+        font-size: 12px;
+    }
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: map-get($colors, background-elevated-highlight);
+    border: 1px hidden map-get($colors, background-elevated-dark);
+
+    $track-width: 25%;
+    $volume-bar-width: 25%;
+
+
+    &__track {
+        margin-left: $img-margin * 1.5;
+        height: 100%;
+        flex: 0 0 $track-width;
+        max-width: $track-width;
+    }
+
+    &__controls {
+        height: 100%;
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        justify-self: flex-start;
+        --child-width: 70%;
+    }
+
+    &__buttons {
+        width: var(--child-width);
+        flex: 0 0 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 10px;
+        button {
+            margin: 5px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__track-progress {
+        margin: 5px 10px 20px 10px;
+        width: calc(var(--child-width) * 1.3);
+    }
+
+    &__button {
+        @extend .circle-button;
+        @include square(40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+
+        &.play-button {
+            padding: 0.205% 0px 0px 0.82%;
+            background-color: rgba($color: #fff, $alpha: 0.9);
+            img {
+                @include square(25px);
+            }            
+        }
+    }
+
+    &__volume {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+        flex: 0 0 $volume-bar-width;
+        margin-right: $img-margin;
+    }
+
+    &__volume-button {
+        img {
+            @include square(20px);
+        }        
+    }
+
+    &__volume-bar {
+        width: 50%;
+        height: 4px;
+    }
+}

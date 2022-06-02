@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Spotify</title>
+</head>
+<body class="app">
+    <header class="header">
+        <div class="header__buttons">
+            <button type="button" class="header__button circle-button" onclick="history.back();" id="">
+                <img src="../assets/icons/arrow_left.svg" alt="">
+            </button>
+            <button type="button" class="header__button circle-button" onclick="history.forward();">
+                <img src="../assets/icons/arrow_right.svg" alt="">
+            </button>
+        </div>
+        <div class="account">
+            <img src="../assets/icons/user.svg" alt="" class="account__image">
+            <span class="account__name">user</span>
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="./index.html" class="menu__banner image-link">
+            <img src="../assets/images/logo.png" alt="" class="menu__logo">
+        </a>
+        <ul class="menu__block">
+            <li class="menu__tag tag">
+                <a href="./index.html" class="tag__body">
+                    <div class="tag__icon tag__icon_n">
+                        <img src="../assets/icons/home.svg" alt=""">
+                    </div>
+                    <span class="tag__text">Главная</span>
+                </a>                
+            </li>
+            <li class="menu__tag tag">
+                <a href="./media.html" class="tag__body">
+                    <div class="tag__icon tag__icon_s">
+                        <img src="../assets/icons/media.svg" alt="">
+                    </div>
+                    <span class="tag__text">Моя медиатека</span>
+                </a>                
+            </li>
+        </ul>
+        <ul class="menu__block">
+            <li class="menu__tag tag">
+                <a href="./favorites.html" class="tag__body">
+                    <div class="tag__icon tag__icon_s">
+                        <img src="../assets/icons/favorite.svg" alt="">
+                    </div>
+                    <span class="tag__text">Любимые треки</span>
+                </a>                
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="main__body">
+            <section class="main-section section">
+                <div class="main-section__title-block">
+                    <h2 class="main-section__title title">
+                        Добрый день
+                    </h2>
+                </div>
+                <div class="main-section__body section-body">
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                    <a href="./playlist.html">
+                        <article class="main-section__card horizontal-track-card">
+                            <div class="horizontal-track-card__image">
+                                <img src="../assets/images/img-placeholder.jpg" alt="">
+                            </div>
+                            <div class="horizontal-track-card__text card-primary-text">Название плейлиста</div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+            <div class="secondary-sections">
+                <section class="secondary-section section">
+                    <div class="secondary-section__title-block">
+                        <h2 class="secondary-section__title subtitle">
+                            Посмотри эти шоу
+                        </h2>
+                        <a href="./playlists.html" class="secondary-section__link text-link">Все</a>
+                    </div>
+                    <div class="secondary-section__body section-body">
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст длинный текст, который не влезает
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+
+                    </div>                    
+                </section>
+                <section class="secondary-section section">
+                    <div class="secondary-section__title-block">
+                        <h2 class="secondary-section__title subtitle">
+                            Также рекомендации
+                        </h2>
+                        <a href="./playlists.html" class="secondary-section__link text-link">Все</a>
+                    </div>
+                    <div class="secondary-section__body section-body">
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то штука
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст длинный текст, который не влезает
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+                        <a href="./playlist.html">
+                            <article class="secondary-section__card vertical-track-card">
+                                <div class="vertical-track-card__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">                                
+                                </div>
+                                <div class="vertical-track-card__content">
+                                    <div class="vertical-track-card__primary-text card-primary-text">
+                                        Какая-то рекомендация
+                                    </div>
+                                    <div class="vertical-track-card__secondary-text card-secondary-text">
+                                        Какой-то текст длинный текст, который не влезает
+                                    </div>
+                                </div>
+                                
+                            </article>
+                        </a>
+
+                    </div>                    
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="player">
+            <div class="player__track small-track-label">
+                <div class="small-track-label__image">
+                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                </div>
+                <div class="small-track-label__text">
+                    <div class="small-track-label__title">
+                        Название
+                    </div>
+                    <div class="small-track-label__subtitle">
+                        Какой-то автор
+                    </div>
+                </div>
+                
+            </div>
+            <div class="player__controls">
+                <div class="player__buttons">
+                    <button type="button" class="player__button">
+                        <img src="../assets/icons/backward.svg" alt="">
+                    </button>
+                    <button type="button" class="player__button play-button">
+                        <img src="../assets/icons/play.svg" alt="">
+                    </button>
+                    <button type="button" class="player__button">
+                        <img src="../assets/icons/forward.svg" alt="">
+                    </button>
+                </div>
+                <div class="player__track-progress track-progress">
+                    <div class="track-progress__time">1:13</div>
+                    <div class="track-progress__bar progress-bar">
+                    </div>
+                    <div class="track-progress__time">3:32</div>
+                </div>
+            </div>
+            <div class="player__volume">
+                <button class="player__volume-button player__button">
+                    <img src="../assets/icons/volume.svg" alt="">
+                </button>
+                <div class="player__volume-bar progress-bar">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
