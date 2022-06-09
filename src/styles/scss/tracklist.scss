@@ -1,0 +1,180 @@
+@import "declarations.scss";
+
+.tracklist-secondary-text {
+    color: map-get($colors, text-link);
+    font: {
+        size: 14px;
+        weight: 400;
+    }
+    letter-spacing: normal;
+}
+
+.middle-track-label {
+    @include track-label(
+        $img-size: 40px, 
+        $img-margin: $img-margin, 
+        $text-padding: 4px 0px, 
+        $primary-font-size: 16px, 
+        $secondary-font-size: 14px
+    );
+
+    &__title, &__subtitle {
+        font-weight: 400;
+        text-overflow: ellipsis;
+    }
+}
+
+.tracklist-section {
+    &__header {
+        padding-bottom: 16px;
+    }
+
+    &__body {}    
+}
+
+.tracklist-header {
+    display: flex;
+    align-items: center;
+
+    &__image {
+        $size: 232px;
+        @include image-wrapper($size);
+        box-shadow: $box-shadow;                
+        margin-right: $main-padding;
+    }
+
+    &__content {
+        color: map-get($colors, text-primary);
+        overflow: hidden;
+        flex: 0 0 50%;
+        align-self: flex-end;
+        padding-right: $main-padding;
+    }
+
+    &__type {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__title {       
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;   
+        font-size: 70px;
+        overflow-wrap: break-word;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin: $main-padding / 4 0px $main-padding / 3 0px;
+    }
+
+    &__about {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        div {
+            margin-right: 10px;
+        }
+    }
+
+    &__owner {
+        font-weight: 600;
+    }
+
+    &__track-count {}
+
+    &__controls {
+        height: 100%;
+
+        margin: auto;
+        justify-self: center;
+    }
+
+    &__play {
+        @include square(100px);
+        padding-left: 4%;
+        img {
+            width: 70%;
+            height: 70%;
+        }        
+    }
+}
+
+.tracklist-row {
+    display: grid;
+    grid-template: 100% / 0.5fr 12fr 9fr 2fr;
+    gap: 16px;
+    padding: 8px 16px;
+
+    &__column {
+        margin: auto 0px;
+        overflow: hidden;
+        
+
+        &:first-child {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.tracklist-body {
+    $background-color: map-get($colors, background-elevated-base);
+    background-color: $background-color;
+
+    &__header {
+        text-transform: uppercase;
+        &::after {
+            height: 30px;
+            background-color: #fff;
+        }
+        position: sticky;
+        top: $header-height;
+        background-color: $background-color;
+
+        $border-color: rgba(map-get($colors, background-elevated-highlight), 0.4);
+        border-bottom: 2px groove $border-color;
+
+        $padding: 16px;
+
+        padding: {
+            top: $padding;
+            bottom: $padding;
+        }
+    }
+
+    &__content {}
+
+    &__track-leading {}
+
+    &__track-name {}
+
+    &__track-albom {}
+
+    &__track-duration {
+
+    }
+}
+
+.tracklist-track {
+    &__leading {   
+                   
+    }
+
+    &:hover {
+        $color: map-get($colors, card-highlight);
+        background-color: rgba($color, $alpha: 0.4);
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    &__label {}
+
+    &__albom {}
+
+    &__duration {}
+}

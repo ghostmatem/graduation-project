@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Spotify</title>
+</head>
+<body class="app">
+    <header class="header">
+        <div class="header__buttons">
+            <button type="button" class="header__button circle-button" onclick="history.back();" id="">
+                <img src="../assets/icons/arrow_left.svg" alt="">
+            </button>
+            <button type="button" class="header__button circle-button" onclick="history.forward();">
+                <img src="../assets/icons/arrow_right.svg" alt="">
+            </button>
+        </div>
+        <div class="account">
+            <img src="../assets/icons/user.svg" alt="" class="account__image">
+            <span class="account__name">user</span>
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="./index.html" class="menu__banner image-link">
+            <img src="../assets/images/logo.png" alt="" class="menu__logo">
+        </a>
+        <ul class="menu__block">
+            <li class="menu__tag tag">
+                <a href="./index.html" class="tag__body">
+                    <div class="tag__icon tag__icon_n">
+                        <img src="../assets/icons/home.svg" alt=""">
+                    </div>
+                    <span class="tag__text">Главная</span>
+                </a>                
+            </li>
+            <li class="menu__tag tag">
+                <a href="./media.html" class="tag__body">
+                    <div class="tag__icon tag__icon_s">
+                        <img src="../assets/icons/media.svg" alt="">
+                    </div>
+                    <span class="tag__text">Моя медиатека</span>
+                </a>                
+            </li>
+        </ul>
+        <ul class="menu__block">
+            <li class="menu__tag tag">
+                <a href="./favorites.html" class="tag__body">
+                    <div class="tag__icon tag__icon_s">
+                        <img src="../assets/icons/favorite.svg" alt="">
+                    </div>
+                    <span class="tag__text">Любимые треки</span>
+                </a>                
+            </li>
+        </ul>
+    </nav>
+    <main class="main">
+        <div class="main__body">
+            <section class="tracklist-section section">
+                <div class="tracklist-section__header tracklist-header">
+                    <div class="tracklist-header__image">
+                        <img src="../assets/images/img-placeholder.jpg" alt="">
+                    </div>
+                    <div class="tracklist-header__content">
+                        <div class="tracklist-header__type">
+                            плейлист
+                        </div>
+                        <div class="tracklist-header__title">
+                            Nevermind
+                        </div>
+                        <div class="tracklist-header__about">
+                            <div class="tracklist-header__owner">
+                                User
+                            </div>
+                            <div class="tracklist-header__track-count">
+                                5 треков
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tracklist-header__controls">
+                        <button class="tracklist-header__play play-button">
+                            <img src="../assets/icons/play.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="tracklist-section__body tracklist-body">
+                    <div class="tracklist-body__header tracklist-row">
+                        <div class="tracklist-body__track-leading tracklist-row__column">
+                            <span class="tracklist-secondary-text">#</span>
+                        </div>
+                        <div class="tracklist-body__track-name tracklist-row__column">
+                            <span class="tracklist-secondary-text">Название</span>
+                        </div>
+                        <div class="tracklist-body__track-albom tracklist-row__column">
+                            <span class="tracklist-secondary-text">Альбом</span>
+                        </div>
+                        <div class="tracklist-body__track-duration tracklist-row__column">
+                            <img src="../assets/icons/clock.svg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="tracklist-body__content">
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-row__column">
+                                <span class="tracklist-secondary-text">1</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">
+                                    Nevermind
+                                </a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>         
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">2</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>        
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">3</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>     
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">4</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>     
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">5</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>        
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">6</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>  
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">7</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>  
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">8</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>  
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">9</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>  
+                        <article class="tracklist-track tracklist-row">
+                            <div class="tracklist-track__leading tracklist-track__leading_h tracklist-row__column">
+                                <span class="tracklist-secondary-text">10</span>
+                            </div>
+                            <div class="tracklist-track__label middle-track-label tracklist-row__column">
+                                <div class="middle-track-label__image">
+                                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                                </div>
+                                <div class="middle-track-label__text">
+                                    <div class="middle-track-label__title">
+                                        Название
+                                    </div>
+                                    <div class="middle-track-label__subtitle tracklist-secondary-text">
+                                        Какой-то автор
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tracklist-track__albom tracklist-row__column">
+                                <a href="./playlist.html" class="tracklist-secondary-text text-link">Nevermind</a>                                
+                            </div>
+                            <div class="tracklist-track__duration tracklist-row__column">
+                                <span class="tracklist-secondary-text">3:32</span>                                
+                            </div>
+                        </article>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="player">
+            <div class="player__track small-track-label">
+                <div class="small-track-label__image">
+                    <img src="../assets/images/img-placeholder.jpg" alt="">
+                </div>
+                <div class="small-track-label__text">
+                    <div class="small-track-label__title">
+                        Название
+                    </div>
+                    <div class="small-track-label__subtitle">
+                        Какой-то автор
+                    </div>
+                </div>
+                
+            </div>
+            <div class="player__controls">
+                <div class="player__buttons">
+                    <button type="button" class="player__button">
+                        <img src="../assets/icons/backward.svg" alt="">
+                    </button>
+                    <button type="button" class="player__button play-button">
+                        <img src="../assets/icons/play.svg" alt="">
+                    </button>
+                    <button type="button" class="player__button">
+                        <img src="../assets/icons/forward.svg" alt="">
+                    </button>
+                </div>
+                <div class="player__track-progress track-progress">
+                    <div class="track-progress__time">1:13</div>
+                    <div class="track-progress__bar progress-bar">
+                    </div>
+                    <div class="track-progress__time">3:32</div>
+                </div>
+            </div>
+            <div class="player__volume">
+                <button class="player__volume-button player__button">
+                    <img src="../assets/icons/volume.svg" alt="">
+                </button>
+                <div class="player__volume-bar progress-bar">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,196 @@
+@import "declarations.scss";
+
+@mixin track-card {
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: map-get($colors, card-base);
+    cursor: pointer;
+
+    &:hover {
+        background-color: map-get($colors, card-highlight);
+    }
+}
+
+$sections-inset: 36px;
+$row-gap: 16px;
+$column-gap: 24px;
+
+$gap: $column-gap;
+
+.title {
+    @extend %primary-text;
+    font-size: 30px;
+}
+
+.subtitle {
+    @extend %primary-text;
+    font-size: 22px;
+}
+
+.card-primary-text {
+    @extend %primary-text;
+    font-size: 15px;
+}
+
+.card-secondary-text {
+    @extend %secondary-text;
+    font-size: 14px;
+}
+
+.main {
+    padding: {
+        top: $header-height;
+        left: $menu-width;
+        bottom: $footer-height;
+    }
+
+    &__body {
+        height: 100%;
+        background-color: map-get($colors, background-elevated-base);
+        padding: $main-padding;
+    }
+}
+
+.section {
+    
+}
+
+.section-body {
+    
+}
+
+.text-link {
+    color: map-get($colors, text-link);
+    &:hover {
+        color: map-get($colors, text-primary);
+        text-decoration: underline;
+    }
+}
+
+.horizontal-track-card {
+    $img-size: 80px;
+    @include track-card;
+    align-items: center;
+    
+
+    &__image {
+        @include image-wrapper($img-size);
+        margin-right: 5%;
+        background-color: map-get($colors, image-placeholder);
+        box-shadow: $box-shadow;
+    }
+
+    &__text {
+        @extend %hiden-overflow-text;
+    }
+}
+
+.vertical-track-card {
+    $min-width: var(--min-card-width);
+    $padding: 16px;
+    $img-size: $min-width - $padding;
+    
+    min-width: $min-width;
+    @include track-card;
+    flex-flow: column nowrap;
+    
+    justify-content: space-between;
+    
+    padding: $padding;
+
+    &__image {
+        @include image-wrapper($img-size);
+        border-radius: 5px;
+        background-color: map-get($colors, image-placeholder);
+        justify-self: flex-start;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        margin-top: 10px;
+        flex: 1 1 auto;
+        justify-self: flex-start;
+    }
+
+    &__primary-text {
+        @extend %hiden-overflow-text;
+        padding-bottom: 4px;        
+    }
+
+    &__secondary-text {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        margin-top: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $column-gap;
+    min-height: 200px;
+
+    &__title-block {
+        margin-bottom: $column-gap;
+    }
+
+    &__title {
+    }
+
+    &__body {
+        @include grid($row-gap, $column-gap);
+        --min-column-width: 270px;             
+        $item-height: 80px;
+        grid-template: auto/repeat(auto-fill,minmax(max(var(--min-column-width),25%),1fr));
+    }
+    
+    &__card {
+        
+    }    
+}
+
+.secondary-sections {
+    .section {
+        margin-top: $sections-inset;
+    }
+}
+
+.secondary-section {
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $column-gap;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__link {
+        align-self: flex-end;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font: {
+            size: 12px;
+            weight: 700;
+        }        
+    }    
+
+    &__body {
+        --min-card-width: 158px;
+        @include grid($gap, $gap);
+        grid-template:  auto/repeat(auto-fill,minmax(max(var(--min-card-width),10%),1fr));
+        a {
+            display: flex;
+        }
+    }
+
+    &__card {}    
+}
